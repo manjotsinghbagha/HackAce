@@ -1,0 +1,6 @@
+beautifulsoup4
+bootstrap4
+Django
+django-allauth
+django-crispy-forms
+Pillow
