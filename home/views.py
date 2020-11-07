@@ -1,16 +1,121 @@
 from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+from django.http import HttpResponse
+
+model =tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(64, (3,3), activation='relu', input_shape=(150, 150, 3)),
+    tf.keras.layers.MaxPooling2D(2,2),
+    
+    tf.keras.layers.Conv2D(128, (3,3), activation='relu'),
+    tf.keras.layers.MaxPooling2D(2,2),
+    
+    tf.keras.layers.Conv2D(128, (3,3), activation ='relu'),
+    tf.keras.layers.MaxPooling2D(2,2),
+    
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Flatten(),
+    
+    tf.keras.layers.Dense(1024, activation='relu'),
+    tf.keras.layers.Dense(5, activation='softmax')
+])
+modelcat=model
+modeldog=model
+
+modeldog = load_model('model/dog')
+modelcat = load_model('model/cat')
+labels=["apetite_loss","hair_loss", "patch", "ticks", "watery_eyes"]
+# sample labels
+import numpy as np
+from tensorflow.keras.preprocessing import image
+
+def pridictdog(path):
+    path=path
+    img= image.load_img(path,target_size=(150,150))
+    x= image.img_to_array(img)
+    x=np.expand_dims(x, axis=0)
+
+    images=np.vstack([x])
+    classes=modeldog.predict(images, batch_size=10)
+    cout=0
+    for i in range(4):
+        if classes[0][i]>classes[0][i+1]:
+            classes[0][i+1]=classes[0][i]
+        else:
+            cout+=1
+    return labels[cout]
+
+
+
+
+def pridictcat(path):
+    path=path
+    img= image.load_img(path,target_size=(150,150))
+    x= image.img_to_array(img)
+    x=np.expand_dims(x, axis=0)
+
+    images=np.vstack([x])
+    classes=modelcat.predict(images, batch_size=10)
+    cout=0
+    for i in range(4):
+        if classes[0][i]>classes[0][i+1]:
+            classes[0][i+1]=classes[0][i]
+        else:
+            cout+=1
+    return labels[cout]
 
 
 def home(request):
     return render(request, 'home/home.html')
 
-def uploadcat(request):
-    return render(request, 'home/uploadcat.html')
+def sub(request):
+    return render(request, 'home/subscription.html') 
 
+def uploadcat(request):
+    if request.method == 'POST':
+        print(request)
+        print (request)
+        print (request.POST.dict())
+        fileObj=request.FILES['filePath']
+
+        fs=FileSystemStorage()
+        filePathName=fs.save(fileObj.name,fileObj)
+        print('+/'*100,filePathName)
+        import os
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        print('*'*100,BASE_DIR)
+        a=pridictcat(BASE_DIR+'/media/'+filePathName)
+        print('+'*100,a)
+        filePathName=fs.url(filePathName)
+        result = a
+        return render(request, 'home/uploadcat.html',{'result':result,'filePathName':filePathName})
+    else:
+        return render(request, 'home/uploadcat.html')
 def uploaddog(request):
-    return render(request, 'home/uploaddog.html')
+    if request.method == 'POST':
+        print(request)
+        print (request)
+        print (request.POST.dict())
+        fileObj=request.FILES['filePath']
+
+        fs=FileSystemStorage()
+        filePathName=fs.save(fileObj.name,fileObj)
+        print('+/'*100,filePathName)
+        import os
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        print('*'*100,BASE_DIR)
+        a=pridictdog(BASE_DIR+'/media/'+filePathName)
+        print('+'*100,a)
+        filePathName=fs.url(filePathName)
+        result = a
+
+        return render(request, 'home/uploaddog.html',{'result':result,'filePathName':filePathName})
+    else:
+        return render(request, 'home/uploaddog.html')
 
 def about(request):
     return render(request, 'home/aboutus.html')

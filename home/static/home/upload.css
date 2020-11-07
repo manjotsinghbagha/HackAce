@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+section {
+    overflow-x: hidden;
+}
+
+:root {
+    --Sniglet-font: "Sniglet", cursive;
+    --Rubik: "Rubik", cursive;
+    --Patua: "Patua One", cursive;
+    --Lobster: "lobster", cursive;
+    --light-black: #2e2c2caf;
+    --bggradient: linear-gradient(to bottom, #c2bec0, #bbaf9e);
+    --light-gray: rgba(255, 255, 255, 0.877);
+}
+
+header a {
+    font-family: var(--Sniglet-font);
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+header {
+    background: #ff512f;
+    /* fallback for old browsers */
+    background: var(--bggradient);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header .nav-item:last-child {
+    padding-right: 10.5em;
+}
+
+header .nav-item {
+    padding: 0.9em;
+}
+
+header .navbar-brand {
+    padding-left: 8rem;
+    font-size: 1.5em;
+}
+
+header .nav-link:hover {
+    color: black;
+}
+
+header .row .col-md-7 {
+    padding: 10vmin 1vmin;
+    padding-bottom: 20vmin;
+}
+
+header .row .col-md-5 {
+    padding: 7.2vmin 1vmin;
+}
+
+header .row .col-md-5 img {
+    width: 70%;
+}
+
+header .container .col-md-7 {
+    font-family: "Rubik", sans-serif;
+}
+
+header .container .col-md-7 h6 {
+    padding: 1vmin;
+    letter-spacing: 2px;
+}
+
+header .container .col-md-7 h1 {
+    font-size: 4.0vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+}
+
+header .container .col-md-7 p {
+    padding: 1vmin 5vmin;
+}
+
+
+
+
+
+footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+}
+
+footer p>span {
+    color: #ff512f;
+}
+
+footer input {
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+}
+
+footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+}
+
+footer .column i {
+    color: #dd2476;
+}
+
+/* It is Adjacent sibling combinator */
+footer .column i+i {
+    padding: 0 0.5em;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 9999;
+    transition: all 1.5s ease;
+}
+
+
+
+.center {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+}
+
+.form-input {
+    width: 300px;
+    padding: 10px;
+    background: #fff;
+    border: 3px dashed #555;
+}
+
+.form-input input {
+    display: none;
+}
+
+.form-input label {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-input img {
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+}
