@@ -1,3 +1,5 @@
 the_vet_hack/__pycache__/
 home/migrations/
 users/migrations/
+home/__pycache__/
+users/__pycache__/
