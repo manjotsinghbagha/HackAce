@@ -32,12 +32,14 @@ how it can be cured.
 
 ### Solution:
 
-Insights of project | Explanation
------------- | -------------
-Idea | VetAce is a web based app solution in which a user can 
- | 1.) Click the pic of pet and upload to the disease predicted over our algorithm.
- | 2.) Our Web App will also suggest initial curing. 
- | 3.) Can explore any disease by visiting discription page or clicking over hyperlinks.
- | 4.) Can get advice from VET experts over our site.
-Remotely Working | Due to this pandemic COVID-19 , work of small scale workers has declined to provide them source to earn.
-Creating Awareness | This will helpful to spread gandhian norms of self reliance and ‘MAKE IN INDIA’  ,increasing the value of our indian products whole over the world.
+VetAce is a web based app solution in which a user can:  
+  1.) Click the pic of pet and upload to the disease predicted over our algorithm.
+  2.) Our Web App will also suggest initial curing. 
+  3.) Can explore any disease by visiting discription page or clicking over hyperlinks.
+  4.) Can get advice from VET experts over our site.
+ 
+In this project we provide user with feature to examine their pets just by uploading a picture of their pet, that to at the ease of your bed and get the result for cure and also expert advice if subscription mode is on.  
+
+All you need to do is simply click a picture of your pet if its suffering from any disease and just uplaod it. We will provide you with the best related output.  
+Just on single click user can upload the the image of thier pet and our application will use machine learning model to generate the report of the disease from which your pet is suffering and will also tell the required cure that can be taken.  
+You can easily have a pre treatment and a knowledge about the disease and can easily consult the VET for further information.
