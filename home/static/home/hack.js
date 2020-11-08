@@ -18,6 +18,13 @@ $(window).scroll(function () {
       var preview = document.getElementById("file-ip-1-preview");
       preview.src = src;
       preview.style.display = "block";
+      
+      var paragraph = document.getElementById("p");
+      var text = document.createTextNode("Submit")
+
+      paragraph.appendChild(text);
+
+       
     }
   }
   

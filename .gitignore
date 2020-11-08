@@ -1,5 +1,8 @@
-the_vet_hack/__pycache__/
-home/migrations/
-users/migrations/
-home/__pycache__/
-users/__pycache__/
+model/cat/saved_model.pb
+model/cat/variables/variables.data-00000-of-00001
+model/cat/variables/variables.index
+model/dog/saved_model.pb
+model/dog/variables/variables.data-00000-of-00001
+model/dog/variables/variables.index
+model.zip
+vet_hack.zip

@@ -91,8 +91,24 @@ def uploadcat(request):
         a=pridictcat(BASE_DIR+'/media/'+filePathName)
         print('+'*100,a)
         filePathName=fs.url(filePathName)
-        result = a
-        return render(request, 'home/uploadcat.html',{'result':result,'filePathName':filePathName})
+        # ["","hair_loss", "patch", "ticks", ""]
+        if a == 'apetite_loss' :
+            result = 'Apetite Loss'
+            info = 'Need to deworm '
+        elif a== 'hair_loss' :
+            result = 'Hair Loss'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        elif a == 'patch' :
+            result = 'Patch'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        elif a == 'ticks':
+            result = 'Ticks'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        else :
+            result = 'Watery Eyes'
+            info = 'Need to deworm '
+
+        return render(request, 'home/uploadcat.html',{'result':result,'info':info,'filePathName':filePathName})
     else:
         return render(request, 'home/uploadcat.html')
 def uploaddog(request):
@@ -111,9 +127,23 @@ def uploaddog(request):
         a=pridictdog(BASE_DIR+'/media/'+filePathName)
         print('+'*100,a)
         filePathName=fs.url(filePathName)
-        result = a
+        if a == 'apetite_loss' :
+            result = 'Apetite Loss'
+            info = 'Need to deworm '
+        elif a== 'hair_loss' :
+            result = 'Hair Loss'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        elif a == 'patch' :
+            result = 'Patch'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        elif a == 'ticks':
+            result = 'Ticks'
+            info = 'Dermatitis but medicine is based on weight. Immediate relief with lotion '
+        else :
+            result = 'Watery Eyes'
+            info = 'Need to deworm '
 
-        return render(request, 'home/uploaddog.html',{'result':result,'filePathName':filePathName})
+        return render(request, 'home/uploaddog.html',{'result':result,'info':info,'filePathName':filePathName})
     else:
         return render(request, 'home/uploaddog.html')
 

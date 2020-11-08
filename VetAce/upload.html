@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT ANALYSIS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="upload.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="#"> <i class="fas fa-paw fa-3x mx-3"></i> VetAce</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <!--CODE TO BE ADDED-->
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <!--CODE TO BE ADDED-->
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link">PET ANALYSIS</a>
+                                <div class="dropdown-content">
+                                    <!--CODE TO BE ADDED-->
+                                    <a href="upload.html">CAT</a>
+                                    <a href="uploaddog.html">DOG</a>
+                                    <!--CODE TO BE ADDED-->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link">DESCRIPTION</a>
+                                <div class="dropdown-content">
+                                    <a href="catdescription.html">CAT</a>
+                                    <a href="dogdescription.html">DOG</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link">OTHERS</a>
+                                <div class="dropdown-content">
+                                    <a href="#">LOGIN</a>
+                                    <a href="aboutus.html">ABOUT US</a>
+                                    <a href="subscription.html">SUBSCRIPTION</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <h6>VETACE:EASY TREATMENT</h6>
+                    <h1>UPLOAD AND GET INFO!!</h1>
+                    <p>Is your CAT suffering from any kind of disease.<br>
+                        Do you want to know what kind it is of?<br>
+                        Upload the picture of your lovely cat and get the desired information.
+                    </p>
+                    <div class="center">
+                        <div class="form-input">
+                            <label for="file-ip-1">Upload Image</label>
+                            <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                            <div class="preview">
+                                <img id="file-ip-1-preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 h-15">
+                    <img src="cat.png" alt="catpic">
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container-fluid p-0">
+            <div class="row text-left">
+                <div class="col-md-5 col-sm-5">
+                    <h4 class="text-light">About us</h4>
+                    <p class="text-muted">WE PROVIDE YOU WITH THE BEST FEATURE TO EXAMINE YOUR ANIMALS CAREFULLY AND
+                        PROIVIDING WITH THE EFFECTIVE RESULTS</p>
+                    <p class="pt-4 text-muted">Copyright ©2020 All rights reserved
+                        <span> VetAce</span>
+                    </p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <h4 class="text-light">UPDATION</h4>
+                    <p class="text-muted">Stay Updated</p>
+                    <form class="form-inline">
+                        <div class="col pl-0">
+                            <div class="input-group pr-5">
+                                <input type="text" class="form-control bg-dark text-white"
+                                    id="inlineFormInputGroupUsername2" placeholder="Email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4 class="text-light">Follow Us</h4>
+                    <p class="text-muted">Let us be social</p>
+                    <div class="column text-light">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.uploadPreview.min.js"></script>
+    <script src="hack.js"></script>
+</body>
+
+</html>
