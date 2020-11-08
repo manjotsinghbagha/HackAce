@@ -1,6 +1,9 @@
-beautifulsoup4
-bootstrap4
+beautifulsoup4==4.9.1
+bootstrap4==0.1.0
 Django
-django-allauth
-django-crispy-forms
-Pillow
+django-allauth==0.43.0
+django-crispy-forms==1.9.2
+Keras==2.4.3
+matplotlib==3.3.2
+Pillow==8.0.1
+tensorflow-cpu==2.3.1
