@@ -1,7 +1,8 @@
 # VetAce
 #### Just Click and Get Your Pet Analysed
 In this project we provide user with feature to examine their pets just by uploading a picture of their pet, that to at the ease of your bed and get the result for cure and also expert advice if subscription mode is on.  
-
+![alt text](https://github.com/manjotsinghbagha/HackAce/blob/main/final-pics/cbs-2.jpg "Logo Title Text 1")
+![alt text](https://github.com/manjotsinghbagha/HackAce/blob/main/final-pics/cbs-3.jpg "Logo Title Text 1")
 All you need to do is simply click a picture of your pet if its suffering from any disease and just uplaod it. We will provide you with the best related output.
 
 ## To run/ Setup over local system 
