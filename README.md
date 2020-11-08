@@ -1,9 +1,7 @@
 # VetAce
 #### Just Click and Get Your Pet Analysed
 In this project we provide user with feature to examine their pets just by uploading a picture of their pet, that to at the ease of your bed and get the result for cure and also expert advice if subscription mode is on.  
-![alt text](https://github.com/manjotsinghbagha/HackAce/blob/main/final-pics/cbs-1.jpg =250x250 "Logo Title Text 1")
-![alt text](https://github.com/manjotsinghbagha/HackAce/blob/main/final-pics/cbs-3.jpg =250x250 "Logo Title Text 1")
-![alt text](https://github.com/manjotsinghbagha/HackAce/blob/main/final-pics/cbs-2.jpg =250x250 "Logo Title Text 1")
+
 All you need to do is simply click a picture of your pet if its suffering from any disease and just uplaod it. We will provide you with the best related output.
 
 ## To run/ Setup over local system 
@@ -64,3 +62,16 @@ Currently we can classify the diseases in animal in 5 categories but later on we
 classify more diseases with respect the different animals.  
 
 Along with this application is full of information. It provides the user with all the information related to the diseases commonly found in domestic animal(cat and dog).  
+
+
+## Market feasibility and Buisness model
+This website/software can generate revenue through these models:
+
+### Software as a service Model for Vet
+The software or website will be given as a service to various veterinary doctor to track development and improvement in animals of their potential coutomers.
+VET can look after them regularly with physical meeting and can provide with the best treatment possible. they can provide suggestions to owner how they can look after and cure the disease in minimal time. through our portal.  
+We will use django-tenant-model to register every VET as a tenant and every tenant will have his/her private patients.  
+This dieticians will be asked to pay for our service.
+
+### Advertisement Model
+Here we could advertise some shops from where pet goods, medicine or curing material could be bought and also could promote specific VET on basis of their subscription and requrement.
