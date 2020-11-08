@@ -18,16 +18,32 @@ $(window).scroll(function () {
       var preview = document.getElementById("file-ip-1-preview");
       preview.src = src;
       preview.style.display = "block";
-      
+
       var paragraph = document.getElementById("p");
       var text = document.createTextNode("Submit")
 
       paragraph.appendChild(text);
+      // console.log(src)
+          // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
+    // available on the index-page because of the script tag above.
+  
+    // var img = document.getElementById('file-ip-1-preview');
+    var img = src;
+    // resize 
+    let mp = tf.tensor(img)
+    console.log(mp)
+    // Load the model.
+    tf.loadLayersModel("/media/model/cat/model.json").then(model => {
+      // Classify the image.
+      model.predict([tf.fromPixels(loadedImage).resizeBilinear([150,150]).array().then(predictions => {
+        console.log('Predictions: ');
+        console.log(predictions);
+      });
+    });
 
        
     }
   }
-  
 
   
   
