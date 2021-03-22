@@ -5,5 +5,5 @@ django-allauth==0.43.0
 django-crispy-forms==1.9.2
 Keras==2.4.3
 matplotlib==3.3.2
-Pillow==8.0.1
-tensorflow-cpu==2.3.1
+Pillow>=8.1.1
+tensorflow-cpu>=2.4.0
