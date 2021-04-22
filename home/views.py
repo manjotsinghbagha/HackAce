@@ -7,25 +7,6 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from django.http import HttpResponse
 
-model =tf.keras.models.Sequential([
-    tf.keras.layers.Conv2D(64, (3,3), activation='relu', input_shape=(150, 150, 3)),
-    tf.keras.layers.MaxPooling2D(2,2),
-    
-    tf.keras.layers.Conv2D(128, (3,3), activation='relu'),
-    tf.keras.layers.MaxPooling2D(2,2),
-    
-    tf.keras.layers.Conv2D(128, (3,3), activation ='relu'),
-    tf.keras.layers.MaxPooling2D(2,2),
-    
-    tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Flatten(),
-    
-    tf.keras.layers.Dense(1024, activation='relu'),
-    tf.keras.layers.Dense(5, activation='softmax')
-])
-modelcat=model
-modeldog=model
-
 modeldog = load_model('model/dog')
 modelcat = load_model('model/cat')
 labels=["apetite_loss","hair_loss", "patch", "ticks", "watery_eyes"]
